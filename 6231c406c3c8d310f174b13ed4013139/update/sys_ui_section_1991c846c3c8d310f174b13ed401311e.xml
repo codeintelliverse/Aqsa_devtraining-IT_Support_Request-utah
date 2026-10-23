@@ -4,13 +4,181 @@
             <element>number</element>
             <position>0</position>
             <sys_created_by>Syeda</sys_created_by>
-            <sys_created_on>2026-10-21 14:38:13</sys_created_on>
-            <sys_id>a5910c46c3c8d310f174b13ed401319b</sys_id>
+            <sys_created_on>2026-10-21 15:51:55</sys_created_on>
+            <sys_id>05721c42c3ccd310f174b13ed40131a2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1365217_it_sup_0_it_support_request" sys_domain="global" view="Default view">1991c846c3c8d310f174b13ed401311e</sys_ui_section>
             <sys_updated_by>Syeda</sys_updated_by>
-            <sys_updated_on>2026-10-21 14:38:13</sys_updated_on>
+            <sys_updated_on>2026-10-21 15:51:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>requested_for</element>
+            <position>1</position>
+            <sys_created_by>Syeda</sys_created_by>
+            <sys_created_on>2026-10-21 15:51:55</sys_created_on>
+            <sys_id>81721c42c3ccd310f174b13ed40131a3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1365217_it_sup_0_it_support_request" sys_domain="global" view="Default view">1991c846c3c8d310f174b13ed401311e</sys_ui_section>
+            <sys_updated_by>Syeda</sys_updated_by>
+            <sys_updated_on>2026-10-21 15:51:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>request_type</element>
+            <position>2</position>
+            <sys_created_by>Syeda</sys_created_by>
+            <sys_created_on>2026-10-21 15:51:55</sys_created_on>
+            <sys_id>01721c42c3ccd310f174b13ed40131a4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1365217_it_sup_0_it_support_request" sys_domain="global" view="Default view">1991c846c3c8d310f174b13ed401311e</sys_ui_section>
+            <sys_updated_by>Syeda</sys_updated_by>
+            <sys_updated_on>2026-10-21 15:51:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>short_description</element>
+            <position>3</position>
+            <sys_created_by>Syeda</sys_created_by>
+            <sys_created_on>2026-10-21 15:51:55</sys_created_on>
+            <sys_id>8d721c42c3ccd310f174b13ed40131a4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1365217_it_sup_0_it_support_request" sys_domain="global" view="Default view">1991c846c3c8d310f174b13ed401311e</sys_ui_section>
+            <sys_updated_by>Syeda</sys_updated_by>
+            <sys_updated_on>2026-10-21 15:51:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>description</element>
+            <position>4</position>
+            <sys_created_by>Syeda</sys_created_by>
+            <sys_created_on>2026-10-21 15:51:55</sys_created_on>
+            <sys_id>0d721c42c3ccd310f174b13ed40131a5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1365217_it_sup_0_it_support_request" sys_domain="global" view="Default view">1991c846c3c8d310f174b13ed401311e</sys_ui_section>
+            <sys_updated_by>Syeda</sys_updated_by>
+            <sys_updated_on>2026-10-21 15:51:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>work_notes</element>
+            <position>5</position>
+            <sys_created_by>Syeda</sys_created_by>
+            <sys_created_on>2026-10-21 15:51:55</sys_created_on>
+            <sys_id>89721c42c3ccd310f174b13ed40131a6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1365217_it_sup_0_it_support_request" sys_domain="global" view="Default view">1991c846c3c8d310f174b13ed401311e</sys_ui_section>
+            <sys_updated_by>Syeda</sys_updated_by>
+            <sys_updated_on>2026-10-21 15:51:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>activity.xml</element>
+            <position>6</position>
+            <sys_created_by>Syeda</sys_created_by>
+            <sys_created_on>2026-10-21 15:51:55</sys_created_on>
+            <sys_id>09721c42c3ccd310f174b13ed40131a7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter display_value="Activities (filtered)">444ea5c6bf310100e628555b3f0739d6</sys_ui_formatter>
+            <sys_ui_section caption="NULL" display_value="" name="x_1365217_it_sup_0_it_support_request" sys_domain="global" view="Default view">1991c846c3c8d310f174b13ed401311e</sys_ui_section>
+            <sys_updated_by>Syeda</sys_updated_by>
+            <sys_updated_on>2026-10-21 15:51:55</sys_updated_on>
+            <sys_user/>
+            <type>formatter</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>7</position>
+            <sys_created_by>Syeda</sys_created_by>
+            <sys_created_on>2026-10-21 15:51:55</sys_created_on>
+            <sys_id>c9721c42c3ccd310f174b13ed40131a8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1365217_it_sup_0_it_support_request" sys_domain="global" view="Default view">1991c846c3c8d310f174b13ed401311e</sys_ui_section>
+            <sys_updated_by>Syeda</sys_updated_by>
+            <sys_updated_on>2026-10-21 15:51:55</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>state</element>
+            <position>8</position>
+            <sys_created_by>Syeda</sys_created_by>
+            <sys_created_on>2026-10-21 15:51:55</sys_created_on>
+            <sys_id>49721c42c3ccd310f174b13ed40131a9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1365217_it_sup_0_it_support_request" sys_domain="global" view="Default view">1991c846c3c8d310f174b13ed401311e</sys_ui_section>
+            <sys_updated_by>Syeda</sys_updated_by>
+            <sys_updated_on>2026-10-21 15:51:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>priority</element>
+            <position>9</position>
+            <sys_created_by>Syeda</sys_created_by>
+            <sys_created_on>2026-10-21 15:51:55</sys_created_on>
+            <sys_id>c5721c42c3ccd310f174b13ed40131aa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1365217_it_sup_0_it_support_request" sys_domain="global" view="Default view">1991c846c3c8d310f174b13ed401311e</sys_ui_section>
+            <sys_updated_by>Syeda</sys_updated_by>
+            <sys_updated_on>2026-10-21 15:51:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>assigned_to</element>
+            <position>10</position>
+            <sys_created_by>Syeda</sys_created_by>
+            <sys_created_on>2026-10-21 15:51:55</sys_created_on>
+            <sys_id>45721c42c3ccd310f174b13ed40131ab</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1365217_it_sup_0_it_support_request" sys_domain="global" view="Default view">1991c846c3c8d310f174b13ed401311e</sys_ui_section>
+            <sys_updated_by>Syeda</sys_updated_by>
+            <sys_updated_on>2026-10-21 15:51:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>city</element>
+            <position>11</position>
+            <sys_created_by>Syeda</sys_created_by>
+            <sys_created_on>2026-10-22 17:27:16</sys_created_on>
+            <sys_id>d3d1fd9ec3481b10f174b13ed40131b8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1365217_it_sup_0_it_support_request" sys_domain="global" view="Default view">1991c846c3c8d310f174b13ed401311e</sys_ui_section>
+            <sys_updated_by>Syeda</sys_updated_by>
+            <sys_updated_on>2026-10-22 17:27:16</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>ip_address</element>
+            <position>12</position>
+            <sys_created_by>Syeda</sys_created_by>
+            <sys_created_on>2026-10-22 17:28:04</sys_created_on>
+            <sys_id>df02b9dec3481b10f174b13ed40131fa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1365217_it_sup_0_it_support_request" sys_domain="global" view="Default view">1991c846c3c8d310f174b13ed401311e</sys_ui_section>
+            <sys_updated_by>Syeda</sys_updated_by>
+            <sys_updated_on>2026-10-22 17:28:04</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

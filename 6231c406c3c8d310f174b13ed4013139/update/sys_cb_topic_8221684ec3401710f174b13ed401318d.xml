@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_topic">
+    <sys_cb_topic action="INSERT_OR_UPDATE">
+        <applicability/>
+        <applicability_mode>query</applicability_mode>
+        <autopilot_topic>false</autopilot_topic>
+        <category>f65fd802c3801710f174b13ed40131d7</category>
+        <channels/>
+        <connect_queue/>
+        <context_profiles/>
+        <description>Submit an IT Support Request Topics by Syeda Aqsa</description>
+        <dialog_acts_enabled>false</dialog_acts_enabled>
+        <expose_on_palette>false</expose_on_palette>
+        <flexible_conversation_switching>false</flexible_conversation_switching>
+        <foundational>false</foundational>
+        <graph>{
+  "graph_api_version": "1.0.84",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "b3a78fdd151346fdbb568debde79595d": {
+          "id": "b3a78fdd151346fdbb568debde79595d",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Hi, How can i Help you?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          }
+        },
+        "940f8bdf72894036b04d369988f22574": {
+          "id": "940f8bdf72894036b04d369988f22574",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Thankyou! Ask again when you need to update IT Support Request."
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          }
+        },
+        "663749e406a24a9aa4edbd346889070a": {
+          "name": "Request Type",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "What's your Request Type?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "d11e841dcefe4b77b84082b19d7f5735",
+          "detailDescription": "",
+          "id": "663749e406a24a9aa4edbd346889070a",
+          "stepType": "ChoicePrompt",
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        },
+        "9378f4a80fc34be2a2f7da2904a81f3f": {
+          "id": "9378f4a80fc34be2a2f7da2904a81f3f",
+          "stepType": "TextOutput",
+          "name": "Confirm IT Support Type",
+          "secure": false,
+          "value": [
+            {
+              "value": "(function execute() {\n      // Return the display value (Label) for the needit_type choice\n      return 'You selected: ' + vaInputs.request_type.getDisplayValue();\n  })()",
+              "mode": "script"
+            }
+          ],
+          "isCollapsible": true,
+          "requestFeedback": true,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "38f2e37a6097417db8bd5ae96a0d719a": {
+          "name": "IT Support – list",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Select a IT Support Request record to view."
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "cdcb9028e82046989a33675c915f91e0",
+          "detailDescription": "",
+          "id": "38f2e37a6097417db8bd5ae96a0d719a",
+          "stepType": "ReferenceChoicePrompt",
+          "mode": "glide_record",
+          "script": "",
+          "metadataScript": "",
+          "cardData": {},
+          "isMultipleSelect": false,
+          "noRecordsResponseMsg": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "You have no IT Support record."
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "condition": {
+            "mode": "glide_scripted_query",
+            "value": "(function execute(table) {\n  \n      \n      var options = [];\n  \n      var grNI = new GlideRecord(table);\n      grNI.addQuery('request_type',vaInputs.request_type.getValue());\n      grNI.addQuery('requested_for',vaInputs.user);\n      grNI.orderBy('short_description');\n      grNI.orderBy('priority');\n      grNI.query();\n  \n            \n      while(grNI.next()) {\n          options.push({ 'value': grNI.getUniqueValue(), 'label': grNI.getValue('number') + \" (\" + grNI.getDisplayValue('priority') + \"): \" + grNI.getValue('short_description') });\n      }\n  \n      // Return the array\n      return options;\n  \n  })(table)"
+          },
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        },
+        "8586dfe6f1034a1e9b954cd73949efbd": {
+          "id": "8586dfe6f1034a1e9b954cd73949efbd",
+          "stepType": "RecordOutput",
+          "name": "IT Support Card",
+          "variableId": "cdcb9028e82046989a33675c915f91e0",
+          "cardTemplate": "General",
+          "cardFields": {},
+          "mode": "variable",
+          "tableName": "x_1365217_it_sup_0_it_support_request",
+          "fields": [
+            "requested_for",
+            "request_type",
+            "priority",
+            "short_description"
+          ],
+          "cardDefinition": {
+            "name": "Record",
+            "value": "General"
+          },
+          "requestFeedback": true,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "condition": {
+            "mode": "glide_query",
+            "value": ""
+          }
+        },
+        "425ad0eb657545eeaa92757b9c75cbee": {
+          "id": "425ad0eb657545eeaa92757b9c75cbee",
+          "stepType": "BooleanPrompt",
+          "name": "Search Again",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Would you like to search again?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "d75fcc69f9b7406db2fae66df050baee",
+          "detailDescription": ""
+        },
+        "9d657a6d2eaf43a1a2423b70871593f4": {
+          "id": "9d657a6d2eaf43a1a2423b70871593f4",
+          "stepType": "Decision",
+          "name": "Search Again"
+        },
+        "d9905b5ba9b74e7580ff6c7336f3078d": {
+          "name": "New priority",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "What priority level do you need the IT Support Request to be?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "1283bd1ca91e42e781cfd242cf6d6869",
+          "detailDescription": "",
+          "id": "d9905b5ba9b74e7580ff6c7336f3078d",
+          "stepType": "ChoicePrompt",
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        },
+        "f67776ca25a848c8a089eae5e5711d4d": {
+          "id": "f67776ca25a848c8a089eae5e5711d4d",
+          "stepType": "CrudAction",
+          "name": "Change priority",
+          "template": {
+            "query": {
+              "terms": [
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "priority",
+                  "expression": "{{vaInputs.new_priority}}",
+                  "id": "90dd967d430442b8a1c5094802009bf0"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "requested_for",
+                  "expression": "{{vaInputs.user}}",
+                  "id": "98621498db384440986a73d415a78404"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "request_type",
+                  "expression": "{{vaInputs.request_type}}",
+                  "id": "0545f986cda4484bb69f95657b96b44a"
+                }
+              ]
+            },
+            "queryString": "priority={{vaInputs.new_priority}}^requested_for={{vaInputs.user}}^request_type={{vaInputs.request_type}}"
+          },
+          "mode": "update",
+          "record": "cdcb9028e82046989a33675c915f91e0",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "attachments": [
+            {
+              "value": "",
+              "mode": "simple"
+            }
+          ],
+          "variableId": "0993712ab3ea4c10a491d04cefb4785b"
+        },
+        "dcb241e4b2bb4453a3a390c270e72944": {
+          "id": "dcb241e4b2bb4453a3a390c270e72944",
+          "stepType": "TextOutput",
+          "name": "Update Priority IT Support Request ",
+          "secure": false,
+          "value": [
+            {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Your priority has been updated."
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "_key": "08c51c4178724c72af5691c529e68ddb"
+            }
+          ],
+          "isCollapsible": true,
+          "requestFeedback": true,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        }
+      },
+      "edges": [
+        {
+          "id": "81b9106a889941fc95d658f744865ce1",
+          "edgeType": "Branch",
+          "source": "9d657a6d2eaf43a1a2423b70871593f4",
+          "target": "663749e406a24a9aa4edbd346889070a",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.search_again=true",
+            "mode": "query"
+          },
+          "label": "Yes"
+        },
+        {
+          "id": "a46665e3352943f098394e9cc0e41336",
+          "edgeType": "Branch",
+          "source": "9d657a6d2eaf43a1a2423b70871593f4",
+          "target": "940f8bdf72894036b04d369988f22574",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.search_again=false",
+            "mode": "query"
+          },
+          "label": "No"
+        },
+        {
+          "id": "eedc99de5f1c4cd4ad51da59e0265273",
+          "edgeType": "Edge",
+          "source": "b3a78fdd151346fdbb568debde79595d",
+          "target": "663749e406a24a9aa4edbd346889070a",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "e20796e5493b42fe87182332f18fec2e",
+          "edgeType": "Edge",
+          "source": "663749e406a24a9aa4edbd346889070a",
+          "target": "9378f4a80fc34be2a2f7da2904a81f3f",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "b85921eff7fb403eaacdbdcbb4231638",
+          "edgeType": "Edge",
+          "source": "9378f4a80fc34be2a2f7da2904a81f3f",
+          "target": "38f2e37a6097417db8bd5ae96a0d719a",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "1bc68dad08d440dc8ffc47cef3f6a666",
+          "edgeType": "Edge",
+          "source": "38f2e37a6097417db8bd5ae96a0d719a",
+          "target": "8586dfe6f1034a1e9b954cd73949efbd",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "b78c9e4963404b8bbed62b23a3cdaf75",
+          "edgeType": "Edge",
+          "source": "425ad0eb657545eeaa92757b9c75cbee",
+          "target": "9d657a6d2eaf43a1a2423b70871593f4",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "fafd973b754344909996563708015e19",
+          "edgeType": "Edge",
+          "source": "8586dfe6f1034a1e9b954cd73949efbd",
+          "target": "d9905b5ba9b74e7580ff6c7336f3078d",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "dafb8163223c4698b8cfd24dfcc8ca7c",
+          "edgeType": "Edge",
+          "source": "d9905b5ba9b74e7580ff6c7336f3078d",
+          "target": "f67776ca25a848c8a089eae5e5711d4d",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "5c09a92c2e0f4390aee9da91363d1244",
+          "edgeType": "Edge",
+          "source": "f67776ca25a848c8a089eae5e5711d4d",
+          "target": "dcb241e4b2bb4453a3a390c270e72944",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "c4ad8dba7c2244b1bd9075cff945718c",
+          "edgeType": "Edge",
+          "source": "dcb241e4b2bb4453a3a390c270e72944",
+          "target": "425ad0eb657545eeaa92757b9c75cbee",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "669a18ba26ba4130b6482d430cdc7924": {
+      "id": "669a18ba26ba4130b6482d430cdc7924",
+      "name": "LiveAgent_application",
+      "value": {
+        "mode": "simple",
+        "value": null
+      },
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "current-user": {
+      "category": "vaInputs",
+      "id": "current-user",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    },
+    "d11e841dcefe4b77b84082b19d7f5735": {
+      "id": "d11e841dcefe4b77b84082b19d7f5735",
+      "name": "request_type",
+      "label": "Request Type",
+      "varType": "choice",
+      "choices": [
+        {
+          "label": "Laptop",
+          "value": "Laptop"
+        },
+        {
+          "label": "Software",
+          "value": "Software"
+        },
+        {
+          "label": "Access",
+          "value": "Access",
+          "checked": true,
+          "meta": {}
+        },
+        {
+          "label": "Other",
+          "value": "Other",
+          "checked": true,
+          "meta": {}
+        }
+      ],
+      "category": "vaInputs",
+      "nodeId": "663749e406a24a9aa4edbd346889070a",
+      "isHidden": false
+    },
+    "cdcb9028e82046989a33675c915f91e0": {
+      "id": "cdcb9028e82046989a33675c915f91e0",
+      "name": "it_support_list",
+      "label": "IT Support – List",
+      "varType": "reference",
+      "table": "x_1365217_it_sup_0_it_support_request",
+      "category": "vaInputs",
+      "autoSelect": false,
+      "autoSelectExpression": "",
+      "nodeId": "8586dfe6f1034a1e9b954cd73949efbd",
+      "isHidden": false
+    },
+    "d75fcc69f9b7406db2fae66df050baee": {
+      "id": "d75fcc69f9b7406db2fae66df050baee",
+      "name": "search_again",
+      "label": "Search Again",
+      "varType": "boolean",
+      "secure": false,
+      "category": "vaInputs",
+      "nodeId": "425ad0eb657545eeaa92757b9c75cbee",
+      "isHidden": false
+    },
+    "1283bd1ca91e42e781cfd242cf6d6869": {
+      "id": "1283bd1ca91e42e781cfd242cf6d6869",
+      "name": "new_priority",
+      "label": "New Priority",
+      "varType": "choice",
+      "choices": [
+        {
+          "label": "Low",
+          "value": "Low"
+        },
+        {
+          "label": "Medium",
+          "value": "Medium"
+        },
+        {
+          "label": "High",
+          "value": "High",
+          "checked": true,
+          "meta": {}
+        }
+      ],
+      "category": "vaInputs",
+      "nodeId": "d9905b5ba9b74e7580ff6c7336f3078d",
+      "isHidden": false
+    },
+    "0993712ab3ea4c10a491d04cefb4785b": {
+      "id": "0993712ab3ea4c10a491d04cefb4785b",
+      "name": "change_priority",
+      "label": "Change Priority",
+      "varType": "reference",
+      "table": "",
+      "inactive": true,
+      "category": "vaInputs",
+      "nodeId": "f67776ca25a848c8a089eae5e5711d4d",
+      "isHidden": false
+    }
+  }
+}</graph>
+        <key_phrases>Submit an IT Support Request</key_phrases>
+        <library>false</library>
+        <live_agent>false</live_agent>
+        <model_type>nlu_keyword</model_type>
+        <modify_confirmation_enabled>false</modify_confirmation_enabled>
+        <name>Submit an IT Support Request</name>
+        <nlu_intent/>
+        <nlu_intent_label/>
+        <nlu_model/>
+        <nlu_model_label/>
+        <nlu_provider/>
+        <palette_label/>
+        <roles/>
+        <root_topic_id/>
+        <secure_custom_input_control>false</secure_custom_input_control>
+        <source_topic_id/>
+        <sys_class_name>sys_cb_topic</sys_class_name>
+        <sys_created_by>Syeda</sys_created_by>
+        <sys_created_on>2026-10-21 16:56:10</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>8221684ec3401710f174b13ed401318d</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Submit an IT Support Request</sys_name>
+        <sys_package display_value="IT Support Assistant" source="x_1365217_it_sup_0">6231c406c3c8d310f174b13ed4013139</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Support Assistant">6231c406c3c8d310f174b13ed4013139</sys_scope>
+        <sys_update_name>sys_cb_topic_8221684ec3401710f174b13ed401318d</sys_update_name>
+        <sys_updated_by>Syeda</sys_updated_by>
+        <sys_updated_on>2026-10-21 17:40:58</sys_updated_on>
+        <title>Submit an IT Support Request</title>
+        <triggerable_by_notification>false</triggerable_by_notification>
+        <type>STANDARD</type>
+    </sys_cb_topic>
+    <sys_translated_text action="delete_multiple" query="documentkey=8221684ec3401710f174b13ed401318d"/>
+</record_update>
