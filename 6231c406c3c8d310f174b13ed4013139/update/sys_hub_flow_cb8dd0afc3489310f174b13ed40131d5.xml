@@ -1,0 +1,1062 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=1046000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Notify the requested user when a support request is assigned or its state changes</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>it_support_request_status_notification</internal_name>
+        <label_cache>[{"name":"trigger.current.assigned_to","label":"Trigger - Record Created or Updated➛IT Support Request Record➛Assigned to","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1365217_it_sup_0_it_support_request","column_name":"assigned_to","choices":null,"usedInstances":{"84a5838e-b1a6-4afc-973a-8a47df54f262":[null]},"attributes":null},{"name":"trigger.current.requested_for.email","label":"Trigger - Record Created or Updated➛IT Support Request Record➛Requested for➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","choices":null,"usedInstances":{"84a5838e-b1a6-4afc-973a-8a47df54f262":["ah_to"]},"attributes":null},{"name":"trigger.current.number","label":"Trigger - Record Created or Updated➛IT Support Request Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_1365217_it_sup_0_it_support_request","column_name":"number","choices":null,"usedInstances":{"84a5838e-b1a6-4afc-973a-8a47df54f262":[null]},"attributes":null},{"name":"trigger.current","label":"Trigger - Record Created or Updated➛IT Support Request Record","reference":"x_1365217_it_sup_0_it_support_request","reference_display":"IT Support Request","type":"reference","base_type":"reference","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{"84a5838e-b1a6-4afc-973a-8a47df54f262":["record"],"bb8ba31d-67c6-40d8-8841-827d336d117f":["record"]},"attributes":{}},{"name":"trigger.current.short_description","label":"Trigger - Record Created or Updated➛IT Support Request Record➛Short description","reference":"","reference_display":"Short description","type":"string","base_type":"string","parent_table_name":"x_1365217_it_sup_0_it_support_request","column_name":"short_description","choices":null,"usedInstances":{"84a5838e-b1a6-4afc-973a-8a47df54f262":[null]},"attributes":null},{"name":"trigger.table_name","label":"Trigger - Record Created or Updated➛IT Support Request Table","reference":"x_1365217_it_sup_0_it_support_request","reference_display":"IT Support Request","type":"table_name","base_type":"table_name","parent_table_name":null,"column_name":null,"choices":null,"usedInstances":{},"attributes":{"test_input_hidden":"true"}}]</label_cache>
+        <master_snapshot>6281a02fc3889310f174b13ed4013113</master_snapshot>
+        <master_snapshot_digest/>
+        <name>IT Support Request Status Notification</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>5781a02fc3889310f174b13ed401318e</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>Syeda</sys_created_by>
+        <sys_created_on>2026-10-26 08:31:17</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>cb8dd0afc3489310f174b13ed40131d5</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>IT Support Request Status Notification</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="IT Support Assistant" source="x_1365217_it_sup_0">6231c406c3c8d310f174b13ed4013139</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Support Assistant">6231c406c3c8d310f174b13ed4013139</sys_scope>
+        <sys_update_name>sys_hub_flow_cb8dd0afc3489310f174b13ed40131d5</sys_update_name>
+        <sys_updated_by>Syeda</sys_updated_by>
+        <sys_updated_on>2026-11-10 07:51:36</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>b9446198c32c5350f174b13ed401314b</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=cb8dd0afc3489310f174b13ed40131d5"/>
+    <sys_variable_value action="delete_multiple" query="document_key=cb8dd0afc3489310f174b13ed40131d5"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_1365217_it_sup_0_it_support_request">assigned_toISNOTEMPTY<item endquery="false" field="assigned_to" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>true</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>Syeda</sys_created_by>
+        <sys_created_on>2026-10-26 08:48:46</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5781a02fc3889310f174b13ed401318e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="IT Support Assistant">6231c406c3c8d310f174b13ed4013139</sys_scope>
+        <sys_updated_by>Syeda</sys_updated_by>
+        <sys_updated_on>2026-10-26 08:48:46</sys_updated_on>
+        <table>x_1365217_it_sup_0_it_support_request</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>cb8dd0afc3489310f174b13ed40131d5</identifier>
+        <identifier_type>flow</identifier_type>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>Syeda</sys_created_by>
+        <sys_created_on>2026-10-26 08:48:46</sys_created_on>
+        <sys_id>1381a02fc3889310f174b13ed4013190</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Syeda</sys_updated_by>
+        <sys_updated_on>2026-10-26 08:48:46</sys_updated_on>
+        <trigger display_value="">5781a02fc3889310f174b13ed401318e</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=cb8dd0afc3489310f174b13ed40131d5^sys_idNOT IN1381a02fc3889310f174b13ed4013190"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=cb8dd0afc3489310f174b13ed40131d5"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=cb8dd0afc3489310f174b13ed40131d5^sys_idNOT INc38d18afc3489310f174b13ed40131dc"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>cb8dd0afc3489310f174b13ed40131d5</id>
+        <name>IT Support Request Status Notification</name>
+        <sys_created_by>Syeda</sys_created_by>
+        <sys_created_on>2026-10-26 08:31:17</sys_created_on>
+        <sys_id>c38d18afc3489310f174b13ed40131dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Syeda</sys_updated_by>
+        <sys_updated_on>2026-10-26 08:31:17</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=c38d18afc3489310f174b13ed40131dc"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=cb8dd0afc3489310f174b13ed40131d5^sys_idNOT IN87ad10efc3489310f174b13ed4013168,b6ad10efc3489310f174b13ed4013112,f2addcafc3489310f174b13ed40131ac"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="IT Support Request Status Notification">cb8dd0afc3489310f174b13ed40131d5</model>
+        <model_id>cb8dd0afc3489310f174b13ed40131d5</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_cb8dd0afc3489310f174b13ed40131d5</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Syeda</sys_created_by>
+        <sys_created_on>2026-10-26 08:31:49</sys_created_on>
+        <sys_id>87ad10efc3489310f174b13ed4013168</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IT Support Assistant">6231c406c3c8d310f174b13ed4013139</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Syeda</sys_updated_by>
+        <sys_updated_on>2026-10-26 08:31:49</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=87ad10efc3489310f174b13ed4013168"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="IT Support Request Status Notification">cb8dd0afc3489310f174b13ed40131d5</model>
+        <model_id>cb8dd0afc3489310f174b13ed40131d5</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_cb8dd0afc3489310f174b13ed40131d5</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Syeda</sys_created_by>
+        <sys_created_on>2026-10-26 08:31:49</sys_created_on>
+        <sys_id>b6ad10efc3489310f174b13ed4013112</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IT Support Assistant">6231c406c3c8d310f174b13ed4013139</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Syeda</sys_updated_by>
+        <sys_updated_on>2026-10-26 08:48:36</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=b6ad10efc3489310f174b13ed4013112"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="IT Support Request Status Notification">cb8dd0afc3489310f174b13ed40131d5</model>
+        <model_id>cb8dd0afc3489310f174b13ed40131d5</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_cb8dd0afc3489310f174b13ed40131d5</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Syeda</sys_created_by>
+        <sys_created_on>2026-10-26 08:31:48</sys_created_on>
+        <sys_id>f2addcafc3489310f174b13ed40131ac</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IT Support Assistant">6231c406c3c8d310f174b13ed4013139</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Syeda</sys_updated_by>
+        <sys_updated_on>2026-10-26 08:48:36</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=f2addcafc3489310f174b13ed40131ac"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=cb8dd0afc3489310f174b13ed40131d5"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=cb8dd0afc3489310f174b13ed40131d5"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=cb8dd0afc3489310f174b13ed40131d5^sys_idNOT IN796f5c27c3889310f174b13ed4013165"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="IT Support Request Status Notification">cb8dd0afc3489310f174b13ed40131d5</flow>
+        <generation_source/>
+        <name>Created or Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>Syeda</sys_created_by>
+        <sys_created_on>2026-10-26 08:39:23</sys_created_on>
+        <sys_id>796f5c27c3889310f174b13ed4013165</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Syeda</sys_updated_by>
+        <sys_updated_on>2026-10-26 08:48:43</sys_updated_on>
+        <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create_or_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=cb8dd0afc3489310f174b13ed40131d5^sys_idNOT INa070642bc3889310f174b13ed40131d4"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="IT Support Request Status Notification">cb8dd0afc3489310f174b13ed40131d5</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>Syeda</sys_created_by>
+        <sys_created_on>2026-10-26 08:43:56</sys_created_on>
+        <sys_id>a070642bc3889310f174b13ed40131d4</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="IT Support Assistant">6231c406c3c8d310f174b13ed4013139</sys_scope>
+        <sys_updated_by>Syeda</sys_updated_by>
+        <sys_updated_on>2026-10-26 08:49:53</sys_updated_on>
+        <ui_id>84a5838e-b1a6-4afc-973a-8a47df54f262</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=a070642bc3889310f174b13ed40131d4"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=cb8dd0afc3489310f174b13ed40131d5"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=cb8dd0afc3489310f174b13ed40131d5"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=cb8dd0afc3489310f174b13ed40131d5^sys_idNOT IN4371a8abc3889310f174b13ed4013143,4f71acebc3889310f174b13ed4013154,8371acebc3889310f174b13ed4013155"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>cb8dd0afc3489310f174b13ed40131d5</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{trigger.current.assigned_to}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>Syeda</sys_created_by>
+        <sys_created_on>2026-10-26 08:48:29</sys_created_on>
+        <sys_id>4371a8abc3889310f174b13ed4013143</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="IT Support Assistant">6231c406c3c8d310f174b13ed4013139</sys_scope>
+        <sys_updated_by>Syeda</sys_updated_by>
+        <sys_updated_on>2026-10-26 08:48:29</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>98588c8e-0919-4258-b9e4-a5f5a9cf75dd</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>cb8dd0afc3489310f174b13ed40131d5</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{trigger.current.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>Syeda</sys_created_by>
+        <sys_created_on>2026-10-26 08:48:29</sys_created_on>
+        <sys_id>4f71acebc3889310f174b13ed4013154</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="IT Support Assistant">6231c406c3c8d310f174b13ed4013139</sys_scope>
+        <sys_updated_by>Syeda</sys_updated_by>
+        <sys_updated_on>2026-10-26 08:48:29</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>0bfcae0c-ba8d-4828-9a6e-ef9bace4d1d2</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>cb8dd0afc3489310f174b13ed40131d5</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{trigger.current.short_description}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>Syeda</sys_created_by>
+        <sys_created_on>2026-10-26 08:48:29</sys_created_on>
+        <sys_id>8371acebc3889310f174b13ed4013155</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="IT Support Assistant">6231c406c3c8d310f174b13ed4013139</sys_scope>
+        <sys_updated_by>Syeda</sys_updated_by>
+        <sys_updated_on>2026-10-26 08:48:29</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>5600aa5d-509c-4db9-b111-af1ba53abf75</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=cb8dd0afc3489310f174b13ed40131d5"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_variable_cb8dd0afc3489310f174b13ed40131d5"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_cb8dd0afc3489310f174b13ed40131d5</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Syeda</sys_created_by>
+        <sys_created_on>2026-10-26 08:31:49</sys_created_on>
+        <sys_id>07ad10efc3489310f174b13ed4013170</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IT Support Assistant" source="x_1365217_it_sup_0">6231c406c3c8d310f174b13ed4013139</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Support Assistant">6231c406c3c8d310f174b13ed4013139</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Syeda</sys_updated_by>
+        <sys_updated_on>2026-10-26 08:31:49</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_cb8dd0afc3489310f174b13ed40131d5</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Syeda</sys_created_by>
+        <sys_created_on>2026-10-26 08:31:49</sys_created_on>
+        <sys_id>76ad10efc3489310f174b13ed401310c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IT Support Assistant" source="x_1365217_it_sup_0">6231c406c3c8d310f174b13ed4013139</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Support Assistant">6231c406c3c8d310f174b13ed4013139</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Syeda</sys_updated_by>
+        <sys_updated_on>2026-10-26 08:31:49</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_cb8dd0afc3489310f174b13ed40131d5</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Syeda</sys_created_by>
+        <sys_created_on>2026-10-26 08:31:49</sys_created_on>
+        <sys_id>8fad10efc3489310f174b13ed4013163</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IT Support Assistant" source="x_1365217_it_sup_0">6231c406c3c8d310f174b13ed4013139</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Support Assistant">6231c406c3c8d310f174b13ed4013139</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Syeda</sys_updated_by>
+        <sys_updated_on>2026-10-26 08:31:49</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_cb8dd0afc3489310f174b13ed40131d5"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_cb8dd0afc3489310f174b13ed40131d5"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Notify the requested user when a support request is assigned or its state changes</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>it_support_request_status_notification</internal_name>
+        <label_cache>[{"name":"trigger.current.assigned_to","label":"Trigger - Record Created or Updated➛IT Support Request Record➛Assigned to","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_1365217_it_sup_0_it_support_request","column_name":"assigned_to","usedInstances":{"84a5838e-b1a6-4afc-973a-8a47df54f262":[null]}},{"name":"trigger.current.short_description","label":"Trigger - Record Created or Updated➛IT Support Request Record➛Short description","reference":"","reference_display":"Short description","type":"string","base_type":"string","parent_table_name":"x_1365217_it_sup_0_it_support_request","column_name":"short_description","usedInstances":{"84a5838e-b1a6-4afc-973a-8a47df54f262":[null]}},{"name":"trigger.current.number","label":"Trigger - Record Created or Updated➛IT Support Request Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_1365217_it_sup_0_it_support_request","column_name":"number","usedInstances":{"84a5838e-b1a6-4afc-973a-8a47df54f262":[null]}},{"name":"trigger.current.requested_for.email","label":"Trigger - Record Created or Updated➛IT Support Request Record➛Requested for➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{"84a5838e-b1a6-4afc-973a-8a47df54f262":["ah_to"]}},{"name":"trigger.table_name","label":"Trigger - Record Created or Updated➛IT Support Request Table","reference":"x_1365217_it_sup_0_it_support_request","reference_display":"IT Support Request","type":"table_name","base_type":"table_name","usedInstances":{},"attributes":{"test_input_hidden":"true"}},{"name":"trigger.current","label":"Trigger - Record Created or Updated➛IT Support Request Record","reference":"x_1365217_it_sup_0_it_support_request","reference_display":"IT Support Request","type":"reference","base_type":"reference","usedInstances":{"84a5838e-b1a6-4afc-973a-8a47df54f262":["record"]},"attributes":{}}]</label_cache>
+        <master>true</master>
+        <name>IT Support Request Status Notification</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="IT Support Request Status Notification">cb8dd0afc3489310f174b13ed40131d5</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>Syeda</sys_created_by>
+        <sys_created_on>2026-10-26 08:48:43</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6281a02fc3889310f174b13ed4013113</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IT Support Assistant">6231c406c3c8d310f174b13ed4013139</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Syeda</sys_updated_by>
+        <sys_updated_on>2026-10-26 08:48:43</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=6281a02fc3889310f174b13ed4013113"/>
+    <sys_variable_value action="delete_multiple" query="document_key=6281a02fc3889310f174b13ed4013113"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=6281a02fc3889310f174b13ed4013113"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=6281a02fc3889310f174b13ed4013113^sys_idNOT IN2681a02fc3889310f174b13ed4013115"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>6281a02fc3889310f174b13ed4013113</id>
+        <name>IT Support Request Status Notification</name>
+        <sys_created_by>Syeda</sys_created_by>
+        <sys_created_on>2026-10-26 08:48:43</sys_created_on>
+        <sys_id>2681a02fc3889310f174b13ed4013115</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Syeda</sys_updated_by>
+        <sys_updated_on>2026-10-26 08:48:43</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=2681a02fc3889310f174b13ed4013115"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=6281a02fc3889310f174b13ed4013113^sys_idNOT IN3681a02fc3889310f174b13ed4013135,b681a02fc3889310f174b13ed4013141,be81a02fc3889310f174b13ed4013117"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="IT Support Request Status Notification">6281a02fc3889310f174b13ed4013113</model>
+        <model_id>6281a02fc3889310f174b13ed4013113</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_6281a02fc3889310f174b13ed4013113</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Syeda</sys_created_by>
+        <sys_created_on>2026-10-26 08:48:44</sys_created_on>
+        <sys_id>3681a02fc3889310f174b13ed4013135</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IT Support Assistant">6231c406c3c8d310f174b13ed4013139</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Syeda</sys_updated_by>
+        <sys_updated_on>2026-10-26 08:48:44</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=3681a02fc3889310f174b13ed4013135"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="IT Support Request Status Notification">6281a02fc3889310f174b13ed4013113</model>
+        <model_id>6281a02fc3889310f174b13ed4013113</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_6281a02fc3889310f174b13ed4013113</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Syeda</sys_created_by>
+        <sys_created_on>2026-10-26 08:48:44</sys_created_on>
+        <sys_id>b681a02fc3889310f174b13ed4013141</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IT Support Assistant">6231c406c3c8d310f174b13ed4013139</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Syeda</sys_updated_by>
+        <sys_updated_on>2026-10-26 08:48:44</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=b681a02fc3889310f174b13ed4013141"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="IT Support Request Status Notification">6281a02fc3889310f174b13ed4013113</model>
+        <model_id>6281a02fc3889310f174b13ed4013113</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_6281a02fc3889310f174b13ed4013113</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Syeda</sys_created_by>
+        <sys_created_on>2026-10-26 08:48:44</sys_created_on>
+        <sys_id>be81a02fc3889310f174b13ed4013117</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="IT Support Assistant">6231c406c3c8d310f174b13ed4013139</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Syeda</sys_updated_by>
+        <sys_updated_on>2026-10-26 08:48:44</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=be81a02fc3889310f174b13ed4013117"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=6281a02fc3889310f174b13ed4013113"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=6281a02fc3889310f174b13ed4013113"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=6281a02fc3889310f174b13ed4013113^sys_idNOT INcb81a02fc3889310f174b13ed4013158"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="IT Support Request Status Notification">6281a02fc3889310f174b13ed4013113</flow>
+        <generation_source/>
+        <name>Created or Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>Syeda</sys_created_by>
+        <sys_created_on>2026-10-26 08:48:45</sys_created_on>
+        <sys_id>cb81a02fc3889310f174b13ed4013158</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Syeda</sys_updated_by>
+        <sys_updated_on>2026-10-26 08:48:45</sys_updated_on>
+        <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9Vaa2/bNhT9K4I+bYA76GFbcfYpy2MN0CaD7XYYikKgSMomJlOuRCnxiv73XeplWa/Ysdy6+ZDYJE2ee3nuOaSVT19VDznUUy/VOXI8qg5UxgUNOPLmmzWFZiGbbY5Wsm+FOEHCDzbqpQgiOlDdwF/N6WrtIQGDXeSF0OgHhAbqpT5QY+RFdLYJ7wnMBJ9PpsnmVLNueP9s6+Z4ZOiWzYQdRmtby16s/UDYAf0S0VDAeMJCWGnzMfvY/VyZpWOUaTEGL5lHAsrVy0+fB+oaBbCkkHC+VrqYxIRdneqTCw2bBvxomnEx1J2x6egGMRFFGkxYzU8lBtGQpm0C6LOgnFBS5KaWwYAi8si9TWnEc8j+gzkvNNnrUkCMaZq/4q2dpSJtxkufYfq4FsznaUuKLu30vWjFH1LUMonURZEn8iRCSxTCfHQtgXJR4HBnS/9pmi94x3gSU9bp+Rh5xTskRMCcSNBQptllHiTcTjMS+lGQoJ/eXj9Ob+y/r+bXb2+n9vR2Np/eX89vb9RvSVz2l0jOmCLMsNhpON+Knb9j1JPbxqOVA2gGaogDthZXWLA459+3wZbT1z4nLMlKjdc47wp3eZ1H30VsTWulNi6tmNMbhSFbcEps4d/PHh7nt+//mv9zMFUtzSJEb6MqdkpULYfdgEs0ZKAcWhdps5Z21g417QfxNlOk19J25RPq3WynU6FzsQAiM76OhMzRE+IihE20ESF2KXtyaCTrPk+c7a9pIBMm+z5evbt+e/Xw5+3s9+zv3fTxff56/vgi/9Oc1IvgZfoHEYcp7GI/60WQbECxE+8YSOjlJyjhmdTTZPvegIq5edKTFWC4+y5bYRpxxQcewC8FRwHkXCi5Mrr3K7TItgom9CgWJU65H8Lyu/cMioQvSkG0YchyXYFQrA5UVfKAUyjhkVg+96kP9S2JK7mtmNzBOqHjoaGZzlizpEro8NLVNUsbIZeYmuZclHSiDqYVpagQpke9OEwtwoSg3h78qyY2g6yVK2Qv8sS7zMtDl8TIROm6H2h6T9AMCa0iruZB6lqQMW2+2eVkV2g9HyYQiRF8guQx7nNY2EMVXc9/AmE/XhEdhP9dBH7ESVWT5BIK48p2hPJLls5fT6eOrh/Qbjy7I85JF7ebUpyc+KYHRTRMnVrj4VgDITSlBo4mEwcjw3WtsUV1vaKIWxiN2M5YCV+gXNzE2TZVbKRL3MSyA/TwCIA1bTwY4PGqmNGxURPTvp9D/Z6WlNsANbA9llyaKyK48BiheV+/NV5bOt5W9bF1jp0JGY0sC1twO4I6d4fUQfrQGKGJNTapW6nzGpQumKIhMye8M4WbMFm+RQM+pF3nde8/JVlDKoS0nqP9msOxNpkCpWuWTFLujZIoix8oDz5/c78dp8woeF9yez6Rce8DSm678l1ROb5Y1g4SgOQPaN9BIo+nLTk7u/tXhVHxbqzHqhAyDDTRzRYVssZNKrQF0w7zTM8de1ZN3Fp/TQeQfVkfNxZP64nhFcStkKN8lOg46/SVFL33pBinS4p59Pkqr8DWS+drwP5ELpccOHq0OgmB2r5bVvAbX4EOBdZUmKtk33FSojgbRSwpZNiDczWsr0gwx0p3h7PUkRX8/qG40nN8zfCgWckOZOfnZRXe9Ht7psTEE9LmZ0Or9VTdbmqV7jN1toMrJW4qvE57O2ze6pyNBlci6i4P9rSuXqNu9q/jom50sJeiPt6buu7+DSjO33Uk6Hm6Dcd7jc9x5dqCT/gIKOIM2m28RHyRPt7J172DXaAIL5V0iJIOOaFbeE9oE6pVFwOGyyLKvhuHBignnordiYDQmAabWiZkoxKtiTSW72xcRodx5U9WQxHAJxebUtXmcRz4Da8zgcocadjUdbP2bHxUfja+S/t2QC2mZLzWlJYseahcWj7bHsFWNJHA4omyskICL2k4UGAPk+csiUKyIBTJ6N/UHm9vuPw8KivjJs9qray4rShbPaCjOuJqXTWJfgO1q/Qpy37nPa0jfL2X8I0+wjdfF/7waNfLMtJse1n2+rW6V/w3kNrsdZ//BzSfvwfdJgAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create_or_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=6281a02fc3889310f174b13ed4013113^sys_idNOT IN4781a02fc3889310f174b13ed4013156"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="IT Support Request Status Notification">6281a02fc3889310f174b13ed4013113</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>Syeda</sys_created_by>
+        <sys_created_on>2026-10-26 08:48:45</sys_created_on>
+        <sys_id>4781a02fc3889310f174b13ed4013156</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="IT Support Assistant">6231c406c3c8d310f174b13ed4013139</sys_scope>
+        <sys_updated_by>Syeda</sys_updated_by>
+        <sys_updated_on>2026-10-26 08:48:45</sys_updated_on>
+        <ui_id>84a5838e-b1a6-4afc-973a-8a47df54f262</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4781a02fc3889310f174b13ed4013156"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=6281a02fc3889310f174b13ed4013113"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=6281a02fc3889310f174b13ed4013113"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=6281a02fc3889310f174b13ed4013113^sys_idNOT IN0781a02fc3889310f174b13ed4013159,4381a02fc3889310f174b13ed4013159,8f81a02fc3889310f174b13ed4013158"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>6281a02fc3889310f174b13ed4013113</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{trigger.current.short_description}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>Syeda</sys_created_by>
+        <sys_created_on>2026-10-26 08:48:45</sys_created_on>
+        <sys_id>0781a02fc3889310f174b13ed4013159</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="IT Support Assistant">6231c406c3c8d310f174b13ed4013139</sys_scope>
+        <sys_updated_by>Syeda</sys_updated_by>
+        <sys_updated_on>2026-10-26 08:48:45</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>5600aa5d-509c-4db9-b111-af1ba53abf75</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>6281a02fc3889310f174b13ed4013113</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{trigger.current.number}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>Syeda</sys_created_by>
+        <sys_created_on>2026-10-26 08:48:45</sys_created_on>
+        <sys_id>4381a02fc3889310f174b13ed4013159</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="IT Support Assistant">6231c406c3c8d310f174b13ed4013139</sys_scope>
+        <sys_updated_by>Syeda</sys_updated_by>
+        <sys_updated_on>2026-10-26 08:48:45</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>0bfcae0c-ba8d-4828-9a6e-ef9bace4d1d2</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>6281a02fc3889310f174b13ed4013113</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{trigger.current.assigned_to}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>Syeda</sys_created_by>
+        <sys_created_on>2026-10-26 08:48:45</sys_created_on>
+        <sys_id>8f81a02fc3889310f174b13ed4013158</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="IT Support Assistant">6231c406c3c8d310f174b13ed4013139</sys_scope>
+        <sys_updated_by>Syeda</sys_updated_by>
+        <sys_updated_on>2026-10-26 08:48:45</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>98588c8e-0919-4258-b9e4-a5f5a9cf75dd</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=6281a02fc3889310f174b13ed4013113"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_variable_6281a02fc3889310f174b13ed4013113"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_6281a02fc3889310f174b13ed4013113</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Syeda</sys_created_by>
+        <sys_created_on>2026-10-26 08:48:44</sys_created_on>
+        <sys_id>3e81a02fc3889310f174b13ed4013130</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IT Support Assistant" source="x_1365217_it_sup_0">6231c406c3c8d310f174b13ed4013139</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Support Assistant">6231c406c3c8d310f174b13ed4013139</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Syeda</sys_updated_by>
+        <sys_updated_on>2026-10-26 08:48:44</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_6281a02fc3889310f174b13ed4013113</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Syeda</sys_created_by>
+        <sys_created_on>2026-10-26 08:48:45</sys_created_on>
+        <sys_id>8b81a02fc3889310f174b13ed4013148</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IT Support Assistant" source="x_1365217_it_sup_0">6231c406c3c8d310f174b13ed4013139</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Support Assistant">6231c406c3c8d310f174b13ed4013139</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Syeda</sys_updated_by>
+        <sys_updated_on>2026-10-26 08:48:45</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_6281a02fc3889310f174b13ed4013113</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Syeda</sys_created_by>
+        <sys_created_on>2026-10-26 08:48:44</sys_created_on>
+        <sys_id>be81a02fc3889310f174b13ed401313c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="IT Support Assistant" source="x_1365217_it_sup_0">6231c406c3c8d310f174b13ed4013139</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Support Assistant">6231c406c3c8d310f174b13ed4013139</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Syeda</sys_updated_by>
+        <sys_updated_on>2026-10-26 08:48:44</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_6281a02fc3889310f174b13ed4013113"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_6281a02fc3889310f174b13ed4013113"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>cb8dd0afc3489310f174b13ed40131d5</sys_id>
+        <latest_snapshot>6281a02fc3889310f174b13ed4013113</latest_snapshot>
+        <compiler_build>glide-australia-02-11-2026__patch7-09-17-2026_10-06-2026_0905.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=cb8dd0afc3489310f174b13ed40131d5^sys_idNOT IN1781a02fc3889310f174b13ed4013191"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.Every</binding_strategy>
+        <plan>{"@class":"com.snc.process_flow.engine.serialization.plan_data.ChunkingPlanData","chunk_data":{"table":"sys_flow_trigger_plan","id":"1781a02fc3889310f174b13ed4013191","name":"plan","plan_signature":null},"plan_data":"CHUNKING_PLAN"}</plan>
+        <plan_id>cb8dd0afc3489310f174b13ed40131d5</plan_id>
+        <snapshot>63c1a06fc3889310f174b13ed4013153</snapshot>
+        <sys_created_by>Syeda</sys_created_by>
+        <sys_created_on>2026-10-26 08:48:46</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1781a02fc3889310f174b13ed4013191</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>Syeda</sys_updated_by>
+        <sys_updated_on>2026-10-26 08:48:46</sys_updated_on>
+        <trigger display_value="">5781a02fc3889310f174b13ed401318e</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=cb8dd0afc3489310f174b13ed40131d5"/>
+</record_update>

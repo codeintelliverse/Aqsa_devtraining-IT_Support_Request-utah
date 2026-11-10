@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="INSERT_OR_UPDATE">
+        <inactive>false</inactive>
+        <order>300</order>
+        <published_ref/>
+        <question display_value="Priority">0f1b9e8fc3185310f174b13ed4013195</question>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>Syeda</sys_created_by>
+        <sys_created_on>2026-11-06 14:40:42</sys_created_on>
+        <sys_id>9f7bd203c3585310f174b13ed40131da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>High</sys_name>
+        <sys_package display_value="IT Support Assistant" source="x_1365217_it_sup_0">6231c406c3c8d310f174b13ed4013139</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Support Assistant">6231c406c3c8d310f174b13ed4013139</sys_scope>
+        <sys_update_name>question_choice_9f7bd203c3585310f174b13ed40131da</sys_update_name>
+        <sys_updated_by>Syeda</sys_updated_by>
+        <sys_updated_on>2026-11-06 14:40:42</sys_updated_on>
+        <text>High</text>
+        <value>High</value>
+    </question_choice>
+    <fx_price action="delete_multiple" query="id=9f7bd203c3585310f174b13ed40131da"/>
+</record_update>

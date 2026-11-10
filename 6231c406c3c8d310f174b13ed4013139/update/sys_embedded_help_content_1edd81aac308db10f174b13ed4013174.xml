@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_embedded_help_content">
+    <sys_embedded_help_content action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <ai_generated>false</ai_generated>
+        <category/>
+        <content><![CDATA[<p>IT Support Request – Administrator Guide</p>
+<p>Use this application to review, manage, and track IT support requests submitted by users.</p>
+<h1 class="title topictitle1"><strong>Managing Requests</strong></h1>
+<ol><li>
+<p>Open the IT Support Request list.</p>
+</li><li>
+<p>Review newly submitted requests.</p>
+</li><li>
+<p>Verify the request details and confirm the reported issue.</p>
+</li><li>
+<p>Update the request status as work progresses.</p>
+</li><li>
+<p>Assign the request to the appropriate support person or team, if assignment fields are available.</p>
+</li><li>
+<p>Add relevant work notes and update the record when necessary.</p>
+</li><li>
+<p>Close the request after the issue has been resolved.</p>
+</li></ol>
+<h1 class="title topictitle1"><strong>Important Information</strong></h1>
+<ul class="steps-unordered"><li>
+<p>Ensure request details are complete and accurate.</p>
+</li><li>
+<p>Keep request statuses up to date.</p>
+</li><li>
+<p>Follow up on pending requests.</p>
+</li><li>
+<p>Maintain clear documentation of actions taken.</p>
+</li><li>
+<p>Ensure users can access only the records and information permitted by their roles.</p>
+</li></ul>
+<div class="related-links role-embedded_help_admin tm-element">
+<div class="relinfo">
+<div class="reltitle">Related information<br />
+<div>
+<ul><li>
+<p>Managing IT Support Requests</p>
+</li><li>
+<p>Updating Request Status</p>
+</li><li>
+<p>Reviewing Submitted Requests</p>
+</li><li>
+<p>IT Support Request Administration Guidelines</p>
+</li></ul>
+</div>
+</div>
+</div>
+</div>
+<div class="note tm-element"><span class="notetitle">Note: </span>Please review and update IT Support Requests regularly to ensure proper tracking and timely resolution.
+<p><strong>Sponsored by Syeda Aqsa</strong></p>
+</div>
+<p> </p>]]></content>
+        <last_sync/>
+        <modifier>normal</modifier>
+        <name>IT Support Form - Admin</name>
+        <page>x_1365217_it_sup_0_it_support_request</page>
+        <product>1</product>
+        <qualifier/>
+        <role display_value="x_1365217_it_sup_0.admin" name="x_1365217_it_sup_0.admin">ae31c406c3c8d310f174b13ed401314c</role>
+        <role_order>10</role_order>
+        <snc_created>false</snc_created>
+        <sys_class_name>sys_embedded_help_content</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-23 09:29:11</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1edd81aac308db10f174b13ed4013174</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>IT Support Form - Admin</sys_name>
+        <sys_package display_value="IT Support Assistant" source="x_1365217_it_sup_0">6231c406c3c8d310f174b13ed4013139</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Support Assistant">6231c406c3c8d310f174b13ed4013139</sys_scope>
+        <sys_update_name>sys_embedded_help_content_1edd81aac308db10f174b13ed4013174</sys_update_name>
+        <sys_updated_by>Aqib</sys_updated_by>
+        <sys_updated_on>2026-10-23 09:58:56</sys_updated_on>
+        <version>all</version>
+    </sys_embedded_help_content>
+    <sys_translated_text action="delete_multiple" query="documentkey=1edd81aac308db10f174b13ed4013174"/>
+</record_update>
